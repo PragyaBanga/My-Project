@@ -15,9 +15,7 @@ public class Saucedemo {
        driver.manage().window().maximize();
        WebElement web= driver.findElement(By.className("form_input"));
        web.sendKeys("standard_user");
-       String firstNameValue = driver.findElement(By.id("first-name")).getAttribute("value");
-       //Assert.assertTrue("First name should not be empty", true);
-       
+ 
        web=driver.findElement(By.name("password"));
        web.sendKeys("secret_sauce");
        driver.findElement(By.className("btn_action")).click();	
@@ -25,8 +23,7 @@ public class Saucedemo {
        driver.findElement(By.xpath("//button[.='ADD TO CART'][1]")).click();
        Thread.sleep(3000);  
        driver.findElement(By.xpath("//div[@id=\"shopping_cart_container\"]")).click();
-       WebElement cartItemCount = driver.findElement(By.className("shopping_cart_badge"));
-     //  Assert.assertTrue("Cart should be empty", cartItemCount.getText().isEmpty());	
+   
        driver.findElement(By.xpath("//a[.='CHECKOUT']")).click();
        driver.findElement(By.id("first-name")).sendKeys("Pragya");
        String expectedName= "Pragya";
