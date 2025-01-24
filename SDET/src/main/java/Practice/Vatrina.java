@@ -22,6 +22,7 @@ public class Vatrina {
    signup.sendKeys("pragya");
    driver.findElement(By.id("username")).sendKeys("pragya_1");
   // signup;
+   
    signup=driver.findElement(By.id("dateOfBirth"));
    signup.sendKeys("22-08-1998");
    signup=driver.findElement(By.id("email"));
